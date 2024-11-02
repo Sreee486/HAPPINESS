@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness Maker</title>
+    <style>
+        /* CSS styles */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 105vh;
+            margin: 2;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: cornsilk;
+            color: brown;
+            text-align: center;
+            
+        }
+        .container {
+            padding: 20px;
+            background: bisque;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 2rem;
+            color: black;
+        }
+        .compliment {
+            font-size: 1.5rem;
+            margin-top: 50px;
+            animation: pulse 1s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>By your true friend!!</h1>
+        <p class="compliment" id="compliment"></p>
+    </div>
+
+    <script>
+        // JavaScript code to display random compliments
+        const compliments = [
+            
+    "You're an amazing person!",
+    "You light up the room!",
+    "You're a fantastic friend!",
+    "Your positivity is infectious!",
+    "You have a great sense of humor!",
+    "You're incredibly talented!",
+    "You're a true gift to the people in your life!",
+    "You're an inspiration to those around you!",
+    "Time spent with you always worth it!!",
+    "There's ordinary, and then you!!",
+    "You're really something special!!",
+    "You are perfect just the way you are!!",
+    "You are enough!!",
+    "you're wonderful!!",
+    "You're one of kind!!",
+    "Your smile lights up the room!!",
+    "Your confidence is infectious!!",
+    "You always know just what to say!!",
+    "The world is better because you're in it!!",
+    "There's is a reason people drawn to you!!",
+    "Whoever raised you deserves a medal for a job well-done!!",
+    "On a scale 1 to 10 ,you're a 11 !!",
+    "You are perfect just the way you are!!",
+    "Your friends are lucky to have you in their lives!!",
+    "The way you treasure your loved one is incredible!!",
+    "Any team should be greatful to have you on it!!",
+    "You're a gift to those around you!!",
+    "you're more helpful than you realize!!",
+    "You should be thanked more often!!"
+            
+
+        ];
+
+        function displayRandomCompliment() {
+            const complimentElement = document.getElementById("compliment");
+            const randomIndex = Math.floor(Math.random() * compliments.length);
+            complimentElement.textContent = compliments[randomIndex];
+        }
+
+        // Display a random compliment when the page loads
+        window.onload = displayRandomCompliment;
+    </script>
+</body>
+</html>
